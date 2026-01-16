@@ -1,0 +1,162 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B600%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-stone-50">
+<div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-stone-200 px-10 py-4 bg-white shadow-sm sticky top-0 z-10">
+<div class="flex items-center gap-3 text-stone-800">
+<div class="size-8 text-[#f9a406]">
+<svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.43 2 5.23 4.21 3.49 7.22L4.93 8.05C6.39 5.63 8.99 4 12 4C15.01 4 17.61 5.63 19.07 8.05L20.51 7.22C18.77 4.21 15.57 2 12 2ZM12 6C10.06 6 8.32 7.16 7.37 8.89L8.8 9.72C9.53 8.61 10.68 8 12 8C13.32 8 14.47 8.61 15.2 9.72L16.63 8.89C15.68 7.16 13.94 6 12 6ZM18.06 17.5C17.47 16.03 16.32 15.25 15.75 14.8C15.75 14.8 13.67 13.2 12 13.2C10.33 13.2 8.25 14.8 8.25 14.8C7.68 15.25 6.53 16.03 5.94 17.5C5.46 18.71 5.93 20 6.94 20H17.06C18.07 20 18.54 18.71 18.06 17.5Z"></path></svg>
+</div>
+<h1 class="text-stone-800 text-xl font-bold tracking-tighter">Pizza Place</h1>
+</div>
+<nav class="flex items-center gap-6 text-sm font-semibold text-stone-600">
+<a class="hover:text-[#f9a406] transition-colors" href="#">Menu</a>
+<a class="text-[#f9a406] font-bold" href="#">Deals</a>
+<a class="hover:text-[#f9a406] transition-colors" href="#">Order History</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 min-w-[84px] cursor-pointer justify-center overflow-hidden rounded-lg h-10 px-4 bg-stone-100 text-stone-700 text-sm font-bold hover:bg-stone-200 transition-colors">
+<span class="material-symbols-outlined text-base">
+shopping_cart
+</span>
+<span class="truncate">Cart (2)</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD4g813Uuut-BJVzHJqMoqU4haGxIb4y04eWJBHf-6BpdSFyjdHtkP1olcQpZmnXn-qjBjT2JfxvLo5sul2qelHo43x-_v8S2mxm19qvDOM0tsk4QEvR9wjOgYDH2GocGwL52bi-Ra0QPJuD8TqQ3YTnSt16f8A-nyJaUWDyIhMS2Z4L-1l3EghTyckMlM-szFRMIrxfJo0He1cBvdyGoTtT4n7eEJK4o60xaihtyqDU-fKOb531r4xXCIf8exdioiM7izbNNBePMo");'></div>
+</div>
+</header>
+<main class="flex-1 bg-stone-50">
+<div class="px-40 py-12">
+<div class="layout-content-container flex flex-col max-w-7xl mx-auto">
+<div class="flex flex-wrap justify-between items-center gap-4 pb-8">
+<h1 class="text-stone-900 text-4xl font-extrabold tracking-tight">Deals &amp; Offers</h1>
+</div>
+<section class="mb-12">
+<h2 class="text-stone-800 text-2xl font-bold tracking-tight mb-6">Popular Deals</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZ9v5NuuMlW8vlXPGIFs4SCk2cCEO2_vWK8cdrSly31FphgiQCN9EhcxqOBavnBYxyyAi7tHa1GQ2g83uu0w5317YtPgSe7NnPvOFroOaQRAVb-sTnUAx2JsHwWf1h9vv29uk5XzAxPZUngq5AtCbQTSZ1WvYCUkkLV6RNnvx3Wl_2MYAAK-MhXQ1IlIU_Xz0uriybkhyxnAhkMQgUg2gSRGJ-eJknlxm_2blox-O-gn5sbMNqbKCgOo0uLp1_TsWPq8vtXytcDEE");'></div>
+</div>
+<h3 class="text-stone-800 text-lg font-bold leading-snug">Buy 1 Get 1 Free on Medium Pizza</h3>
+<p class="text-stone-600 text-sm">Our classic BOGO deal. Perfect for sharing... or not!</p>
+<button class="w-full mt-auto flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#f9a406] text-stone-900 text-sm font-bold hover:bg-amber-400 transition-colors">
+<span class="truncate">Add to Cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBM1vlQKXbyiNmH1okUzGW5XTYbiOHdSXqAJ3_SkU9CxmU-K3EPB8fCOGYvAAgfHaKhqIkwMqzLn0gHVIJKaedTgOHFuB0NMVLgkSIuJxrYwMODNRLumy-TbAZqrPVh1XdLaQalz6iNm2tkdKX4xXw3jjF7_C1ZKCXF2dnK5Gvr4YYW3nV4zG41HoNNTuh7NzUOE-2V5mmOQeiN2aVqYBn6X8d6WqKLMNTlQM-G9ikZ56lk3eEWcC5HzhwN7JFLCvSjNuwA5RAPmq0");'></div>
+<div class="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">₹699</div>
+</div>
+<h3 class="text-stone-800 text-lg font-bold leading-snug">Family Combo</h3>
+<p class="text-stone-600 text-sm">2 Large Pizzas + 2 Drinks. Enough for the whole family.</p>
+<button class="w-full mt-auto flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#f9a406] text-stone-900 text-sm font-bold hover:bg-amber-400 transition-colors">
+<span class="truncate">Add to Cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqa4pxMOOm4t8dtEtSmddpvqh58rmT9Ia53M_Pq1sEDr0iT_PvB2ZauwEeIXVevJXpfs8p5c6rZyLuqDLMsIYZ6YvWcAhFqthn-Dkc-dCxcIX4IfguH-3kcWaGqGhWoHtrxd6BbKfkG0UPFxfJuIDtQ3PPFkzzIyAnCPiIwKI-OZUkqZrKC_mzL8Fux96M5HC3Z-rcja-BOWGfBDYsfOQTpWaZ2RF7LvkfOQJw2jbGQeEcp4EDzPBArxOvF3jxx7Om1zzB8BYQk0Q");'></div>
+<div class="absolute top-2 right-2 bg-yellow-400 text-stone-900 text-xs font-bold px-2 py-1 rounded-full">50% OFF</div>
+</div>
+<h3 class="text-stone-800 text-lg font-bold leading-snug">50% Off on First Order</h3>
+<p class="text-stone-600 text-sm">New here? Welcome with a tasty discount!</p>
+<button class="w-full mt-auto flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#f9a406] text-stone-900 text-sm font-bold hover:bg-amber-400 transition-colors">
+<span class="truncate">Add to Cart</span>
+</button>
+</div>
+</div>
+</section>
+<section class="mb-12">
+<h2 class="text-stone-800 text-2xl font-bold tracking-tight mb-6">Limited Time Offers</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTbIlWgzogDeWznrUErvRLXShp-WnilNMiJu5czbpUl7klKwAi3Z7rR7Vyo6hBTujAu0yfPLVh2JqjSBWpCdW6FLanPAUE_E7DtBPcOC2DTuhkIx89_9Wzu7aJGMscNyKZil6Mw5a2RXN-gQCp8SvC2R0nh5Sk3oTjGObVlbRW8v_oBDfac7BqfTtnvT43Ky8zWVkjJEzVaK3gKARjHqN8NuVbWfxsBkVzVvZgHbrIe4HDcYEgT3TXs6_Q5XpBWHNuUh0q6o2hgGI");'></div>
+<div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">🔥 Hot Deal</div>
+</div>
+<h3 class="text-stone-800 text-lg font-bold leading-snug">2 Medium Pizzas at ₹499</h3>
+<p class="text-stone-600 text-sm">A fiery deal you don't want to miss.</p>
+<button class="w-full mt-auto flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#f9a406] text-stone-900 text-sm font-bold hover:bg-amber-400 transition-colors">
+<span class="truncate">Add to Cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDboI2QKXVWQa92yZr6KV3MYrvvgqrx60FzHuCmzMPWvZB75Ua98u51rRhOeZdDNJCr6p8APJPwnsEiiHKDCd8E5UvmFKC302STyIbVrEevT3sfmZmFVmFSd_b1fN_bPAgVtSYCP96kvsP6DPYr8jr1V80Bli2c1tp9_1EUjrXiWR5e66T06gmefUbmy13xdeTTt6auNzVONPOHrh6dwNSYIh8wKpYWvFdMEYhiEDdukmNZObJXIB2YtgHAbkxhGfGTqX9suz48oaw");'></div>
+<div class="absolute top-2 left-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">⏳ Ends Soon</div>
+</div>
+<h3 class="text-stone-800 text-lg font-bold leading-snug">30% Off on All Sides</h3>
+<p class="text-stone-600 text-sm">Complete your meal with our delicious sides.</p>
+<button class="w-full mt-auto flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#f9a406] text-stone-900 text-sm font-bold hover:bg-amber-400 transition-colors">
+<span class="truncate">Add to Cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkB3gyHKlluXTAYbq8jXwGyRgezPcqTBWan90xb1kheS8Dsq_ICqO_TzKS7L2t756LVacWs-9B6XNE3oOFsxBCk68QP0UuoFIfKard-LY6cy92gqnY8EboQ0QshdyJbchiwCZGWSVvD8TQrqDqqhRDJTirDGAUV41paKNoY2WPDVeE3HQEktIn3rg0GsaZ0z97PqL6tJnV6Rdl5uTAz5uLOSm8rAwWhRYu4JbN_0W0d-8gnC5C6QOp9h5RzO_bTX2wgfVwISawA1g");'></div>
+<div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">🔥 Hot Deal</div>
+</div>
+<h3 class="text-stone-800 text-lg font-bold leading-snug">Free Garlic Bread on Orders Above ₹500</h3>
+<p class="text-stone-600 text-sm">Everyone loves free garlic bread. Go on, treat yourself.</p>
+<button class="w-full mt-auto flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#f9a406] text-stone-900 text-sm font-bold hover:bg-amber-400 transition-colors">
+<span class="truncate">Add to Cart</span>
+</button>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+<section>
+<h2 class="text-stone-800 text-2xl font-bold tracking-tight mb-6">Other Offers</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+<div class="flex items-center gap-3">
+<div class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB5nFUT5geGH56TXGchfHImWJrFRAdTVuaPkuHTTSEJaMAXUc4ObDw70i1agMQIS_6pAqTnPJhpbnwSQZio9HcwWTvPfqG9xRR8sSn86IrYerirhaH23kc_k2RQ0Rm0CckKGnjUmyWwa5BtongTFsrV_02GhGbTDJ_kJhXsGmyJhDCJEloDyM1pV3CfjcZBxLSZ36d5ecMMNk7zYi4N-1fhTMSgXxjD373x4lJR8epSLiy-DASIK9rJ8O0PnFzNakXMcGlUKWmKuhE");'></div>
+<div>
+<h3 class="text-stone-800 font-semibold leading-snug">Student Special: 15% Off</h3>
+<p class="text-stone-500 text-sm">Show valid ID.</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBAqpGsaoK1UOGx5kPLNfEBc4zoOATLvikUqZseY2ugLQw30mnsBPWh177w6rtyvBY8QEiB2BcyJuWf7ujsfm-JIQ0nIRgHXHta5gEtK9wQ1sJb8ktjDP77hrB987XR2bkSmB3KTymH-fF6BXGkAamSlVH6VG-eyBEokGh99McPIdfOmybNV0mqvx1pxir9i2C5XSD5AHiI56pbRJAU4jlrcdUxaxyU51O-VPW3p0Fcc37ounw5Y9aeDT-yTva6uhCy-tMmGOmVEo0");'></div>
+<div>
+<h3 class="text-stone-800 font-semibold leading-snug">Lunch Combo: ₹299</h3>
+<p class="text-stone-500 text-sm">Pizza + Drink.</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-16 h-16 bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGuSmJipOe5mvNxvKADYqXGE02_ZgxJ30t_SxqYBSr80vlX_y4i6boJlAzG5JJtCkIQJ75SlhWHbkyQuA-jNgYzJWmo56rgQOo9MF17hYdIVsCWqLaHz8ZrgvcDm6veSShNpvhSL8ofCZFqW1iRR8ZRsTdheghZTIR7CQ9nNpe79VM5wfGJGD0VnowZve5OWzJvvKBomAtOdckiOtFboMC8aO6D5s0X89nirFE0_lV3RABp0ZnLbSIgmOwipZk0pA7Qkf72jmXPLs");'></div>
+<div>
+<h3 class="text-stone-800 font-semibold leading-snug">Weekend Offer</h3>
+<p class="text-stone-500 text-sm">Free Dessert on orders over ₹799.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white p-6 rounded-xl shadow-sm">
+<h2 class="text-stone-800 text-2xl font-bold tracking-tight mb-4">Have a Coupon?</h2>
+<div class="flex flex-col sm:flex-row items-end gap-3">
+<label class="flex flex-col w-full">
+<span class="text-sm font-medium text-stone-600 mb-1">Coupon Code</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-stone-800 focus:outline-none focus:ring-2 focus:ring-[#f9a406] border border-stone-300 bg-white h-12 placeholder:text-stone-400 p-3 text-base font-normal" placeholder="Enter code here" value=""/>
+</label>
+<button class="flex w-full sm:w-auto min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-green-500 text-white text-sm font-bold hover:bg-green-600 transition-colors">
+<span class="truncate">Apply</span>
+</button>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

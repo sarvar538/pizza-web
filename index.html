@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Pizza Place - Menu</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #f5333f;
+            --secondary-color: #141414;
+        }
+        .bg-primary {
+            background-color: var(--primary-color);
+        }
+        .text-primary {
+            color: var(--primary-color);
+        }
+        @keyframes addToCart {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .animate-add-to-cart {
+            animation: addToCart 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 bg-white px-4 sm:px-6 lg:px-10 py-3 shadow-sm sticky top-0 z-20">
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-2 text-red-500" href="#">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+<h1 class="text-xl sm:text-2xl font-bold leading-tight tracking-[-0.015em] text-[var(--secondary-color)]">Pizza Place</h1>
+</a>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-gray-900 text-base font-semibold leading-normal hover:text-primary transition-colors" href="#">Menu</a>
+<a class="text-gray-500 text-base font-medium leading-normal hover:text-primary transition-colors" href="#">Deals</a>
+<a class="text-gray-500 text-base font-medium leading-normal hover:text-primary transition-colors" href="#">Order History</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"> search </span>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full border border-gray-300 bg-gray-50 py-2 pl-10 pr-4 text-base font-normal leading-normal text-gray-900 placeholder-gray-400 transition-colors focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Search menu..." value=""/>
+</div>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full h-10 px-5 bg-primary text-white text-base font-bold leading-normal tracking-wide shadow-md hover:bg-red-600 transition-all">
+<span class="material-symbols-outlined"> shopping_cart </span>
+<span class="truncate">Cart (0)</span>
+</button>
+<button class="hidden sm:block">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrJZUz2885YX6344anIon0AFfKeJ06VLm2PUozDTJ0LxVH3dwXfuokn4wZXyn8Q1puJSujJPa9-BHpuUTiXra1tFp9EMLf255FRa2jHCni2fualk6rHsnhWUxxN8Gw9R2p64XY9hy9JxW5kv_yCe9Rgr3OFKwy3QoKLbL3iDiAyy93APesBmud2G9EvvuYkMdcgrIwvtW47mP4Kb5Fx6xfdQqQ0AF_0ZeJj6S_OZ06Zpih1ieU5VNQESx9pXM-djPPJwx-SPKqPhum");'></div>
+</button>
+<button class="lg:hidden text-gray-700">
+<span class="material-symbols-outlined text-3xl"> menu </span>
+</button>
+</div>
+</header>
+<main class="flex-1 bg-gray-50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<h1 class="text-4xl font-extrabold tracking-tight text-gray-900 mb-10 text-center">Our Menu</h1>
+<div class="space-y-16">
+<div>
+<h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-6">Pizzas</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<div class="group relative flex flex-col bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative"> <img alt="Classic Pepperoni Pizza" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqx9bioozlVhEw_qxgdOjCX9KfwOrxv8uyhUNn-xiSUkESCygg9hZccVYS9xFPwhdNSfCGXuLP9IBxOXC4Gzc7xAUqT5BkP77wAndHfoFvH11NtVeHCHJQt4oo2kGojzuXvnNrtiwEsniF18B1wv_i1L7M7KBKGJ16E2ZfOAqL7qv6WiT7hxd9NnQT0kWz_vBw_Bsnep2crd7t3voIrwGhfLcDHMtAsb0B61TX-BfN6ybfmzggsPtgdUCtnuDrjGbWoiZZdKstR9Cv"/>
+<div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-gray-900">Classic Pepperoni</h3>
+<p class="text-gray-600 text-sm mt-1 flex-1">Traditional pepperoni pizza with a rich tomato sauce and mozzarella cheese.</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-xl font-black text-gray-900">$12.99</p> <button class="bg-primary text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors flex items-center gap-2 group-hover:scale-105 active:scale-95 active:animate-add-to-cart"> <span class="material-symbols-outlined text-base"> add_shopping_cart </span> Add </button> </div>
+</div>
+</div>
+<div class="group relative flex flex-col bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative"> <img alt="Margherita Pizza" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRk7EqUvCnClFHJ0uC849M_bLKXXJu6PDx7wGmJAc4trlI9fRx2e0SFXaCRyaLFOqPbcQchmmrlB2cYug5niu6jfV9-_etv-4TAXX5T1i_U9Bzsfd3WeK9NnMQDHqkIjWCFji7CmIv9DrFWL8iwdZO48scdph-HvumX-jlSlw4J04TEx0V0rFfSmve3m50fk2JQphAfDobn0984J5RfEQbvM5l2cl5vZD1uNv2uvAQIjrw_mWTXBFFBaV1Yos8JBX5mQ4VtClBYPSB"/>
+<div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-gray-900">Margherita</h3>
+<p class="text-gray-600 text-sm mt-1 flex-1">A classic with fresh tomatoes, mozzarella, and aromatic basil.</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-xl font-black text-gray-900">$10.99</p> <button class="bg-primary text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors flex items-center gap-2 group-hover:scale-105 active:scale-95 active:animate-add-to-cart"> <span class="material-symbols-outlined text-base"> add_shopping_cart </span> Add </button> </div>
+</div>
+</div>
+<div class="group relative bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-105"> <img alt="Hawaiian Pizza" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqB0gZxgYwvnm2Mb4ARku5-cQwhxc6WNPRQNlyuswyIQVyQj-I5UBuM_zpFOHqeWcLSU1sTh2OyQS_P_9zbTTyr6EejZSFlUuRC3FeBaxMt-Y2WkBpeTD8-iL0SdRRxERhhOBDm8uj139LbKuXrLd10XFe8USeCqsj0O_zjb1wcUsg1ErssQxA1T5iQc8LWUbXgNiimDLiUu2Wq88mDxHUkf26O1es5yWJ9J55DnYtukD48VyFsBkOZ9YgpCsU17CvMtl6N11cI8iI"/>
+<div class="p-4 bg-gray-800 text-white">
+<h3 class="text-xl font-bold">Hawaiian</h3>
+<p class="text-gray-400 text-sm mt-1">Sweet and savory with juicy pineapple and savory ham.</p>
+<div class="flex justify-between items-center mt-3">
+<p class="text-lg font-semibold text-primary">$13.99</p> <button class="bg-primary text-white font-bold py-2 px-3 rounded-md hover:bg-red-600 transition-colors flex items-center gap-1 active:scale-95 active:animate-add-to-cart"> <span class="material-symbols-outlined text-lg"> add </span> </button> </div>
+</div>
+</div>
+<div class="group relative bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRs5orKL_U_EofnerJHNwkwqPXlivOJzXV3v0ztBCH8lDbFdSK8t9thr7642Vsms1nJwANueaCcX3IlTFqjGvzgSAyyYpQExh1BU9aODz_wI0n6cng4met0MDNfucdxKBscAUp-R98njzSARZDBs7aeyOPBwud_gV0XCVlLbNRopLnXj8K111PFDZM0Kx3KgRaqG9EQtfnDluw-NwdE2DLAfMFz4EOXs0bNp8tKMpxA38zgwjkTe_bwoDEjx164PSmLa4aWdOgk7ro')"></div>
+<div class="p-4">
+<h3 class="text-lg font-bold">Meat Lovers</h3>
+<p class="text-sm text-gray-500 mt-1">Pepperoni, sausage, ham, and bacon.</p>
+<div class="flex items-center justify-between mt-4"> <span class="text-xl font-bold text-gray-800">$15.99</span> <button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center transform transition-transform duration-300 group-hover:rotate-45 active:scale-90 active:animate-add-to-cart"> <span class="material-symbols-outlined"> add </span> </button> </div>
+</div>
+</div>
+<div class="group relative bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div> <img alt="BBQ Chicken Pizza" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcYLOfNyKRbmABLghXWzhssp8ISwI6EtEPuf--w43luBeKagEKGajrH_sSORjGYZDbDlN8hoebKHJDXstJnGAN__T2dy-tNhAAsdpwa_ApNQrC9xOJBvmpHnGt5o5erOUAl9EzZYcWzB19swofGrrbNeicHk3vU4qFQHMr4fwhpeCMgZzCZ3wGOmmXgMoDWYdcS9GT-jg3oP1qGlhnGhonjyZLXZQv-1OrIiY0JZK0Q67icS27xClMcKdrskdPoJ9BJ9ZGj89bz7QW"/>
+<div class="absolute bottom-0 left-0 p-4 text-white">
+<h3 class="text-xl font-bold">BBQ Chicken</h3>
+<p class="text-sm">Grilled chicken, red onions, cilantro, BBQ sauce.</p>
+<div class="flex justify-between items-end mt-2"> <span class="text-2xl font-black">$14.99</span> <button class="bg-white text-primary font-bold py-2 px-4 rounded-full transition-all duration-300 hover:bg-gray-200 active:scale-95 active:animate-add-to-cart">Add</button> </div>
+</div>
+</div>
+<div class="group relative flex flex-col bg-gray-900 text-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:shadow-primary/50 hover:shadow-2xl">
+<div class="relative h-48"> <img alt="Veggie Supreme Pizza" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-C_ObrNOxL0SglaYWxXYj-Hw8qWcoB8KJB2B7F1oGwu5a7P8bC2TICyOLRyYkxqcs8-VNFOkevaVbzETqR48RN1Ahxvcp2C-jdPzGzGu6TjnPC1YQ9XEccF22WlLDpNmTOeffgg1WkgHUiR7BotqlaKjDoY85vSAwpwIAPu08QJEJuXDu4zC7AATDfkIkw_9EBdhrfFyXSICxqgSUs1M0AlOBjdPLuvOtLQVGeExuib0fd-llC4NBTyPz1EBlNpHB9DVd0Vj4bWfW"/> </div>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-primary">Veggie Supreme</h3>
+<p class="text-gray-300 mt-1 flex-1">Bell peppers, onions, olives, mushrooms, and tomatoes.</p>
+<div class="flex justify-between items-center mt-4"> <span class="text-xl font-bold">$13.99</span> <button class="border-2 border-primary text-primary font-bold py-2 px-4 rounded-full transition-all duration-300 hover:bg-primary hover:text-white active:scale-95 active:animate-add-to-cart">Order</button> </div>
+</div>
+</div>
+<div class="group relative flex flex-col bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative"> <img alt="Buffalo Chicken Pizza" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFAZCoUa28-CErTEMDPQIXFchRiZmiQeY_JP5SL97eFYW6YQIgBOLdy_ouYyc_6_em3M8vGG_rt9y3AQpmaUV31LNTKlk6MX-3zVN-XDIEkd1lhdq0ZefFqNmFQOTXelO60RolYzd9B3zEzvutNfS9eObTWsWGlfnQH9cOLgujCPJIIIBtyIp8G-srFcT-9GpQUsrx5-8hWbl_gIvCyW99PvpOgismrx5LemHPQfi5cvgev01lyetgHXHne_W0Q12RjwbzqPnic1ED"/>
+<div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-gray-900">Buffalo Chicken</h3>
+<p class="text-gray-600 text-sm mt-1 flex-1">Spicy buffalo sauce, grilled chicken, and ranch drizzle.</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-xl font-black text-gray-900">$14.99</p> <button class="bg-primary text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors flex items-center gap-2 group-hover:scale-105 active:scale-95 active:animate-add-to-cart"> <span class="material-symbols-outlined text-base"> add_shopping_cart </span> Add </button> </div>
+</div>
+</div>
+<div class="group relative bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-105"> <img alt="Four Cheese Pizza" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMMLC0tHQtX78JwtW0Sy8NNxFN-4njaZXztRglU-zvJzIeg0RmFPUd6TYK0sDmRClROD4-DNf-58PLN8c5CSOU1J1NmCXFWyZMLvwOKXcCqe-4RTUB2z6G1WFy5XZiGtGzsjn6xJ1ac0xWwY721TTbHIY1pUfrHfOQfVd5fyL7GT7TKb7Jmq0LiiXqrlvnezH-klT6UA1s2axhqt8fvS4MJbvdPs0cOkyUpyG4CEwma0BNeS9mfCFg5jwulc5xOYqCU2I11_af8lA6"/>
+<div class="p-4 bg-gray-800 text-white">
+<h3 class="text-xl font-bold">Four Cheese</h3>
+<p class="text-gray-400 text-sm mt-1">A blend of mozzarella, provolone, parmesan, and asiago.</p>
+<div class="flex justify-between items-center mt-3">
+<p class="text-lg font-semibold text-primary">$12.99</p> <button class="bg-primary text-white font-bold py-2 px-3 rounded-md hover:bg-red-600 transition-colors flex items-center gap-1 active:scale-95 active:animate-add-to-cart"> <span class="material-symbols-outlined text-lg"> add </span> </button> </div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-6">Sides</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<div class="group relative flex flex-col bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"> <img alt="Garlic Knots" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPR-nkdlrpAb--xwIOsm_Qt_TgOfTn8bEglTCSW_A5CEyOFbSOJ-VGjbegUqjygWs-WAYj3_qntSa41N2Kq8ltrAYC9GeA8N7tjdR8H_Lh3q29aAMvBA1XL81vNUqJOq7FDty0pgJC2a8jPuShGP_PfPEFOV4Ry4zELyZP_QfmBh3WsqKR7bCBNe96dsuOjMdkns40XRtceMarlGc8DlN0L0QOaRhh_pMHalw71ZHqt6A2f2lK5FwU6w_q4LzMnZGsHNgg3IfqgcFl"/>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-gray-900">Garlic Knots</h3>
+<p class="text-gray-600 text-sm mt-1 flex-1">Warm, buttery bread knots brushed with garlic and herbs.</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-xl font-black text-gray-900">$5.99</p> <button class="bg-primary text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors flex items-center gap-2 group-hover:scale-105 active:scale-95 active:animate-add-to-cart"> <span class="material-symbols-outlined text-base"> add_shopping_cart </span> Add </button> </div>
+</div>
+</div>
+<div class="group relative flex flex-col bg-gray-900 text-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:shadow-primary/50 hover:shadow-2xl">
+<div class="relative h-48"> <img alt="Spicy Wings" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmpIfQa31lEOz_GYrKQqhpqi2XV1uq1c16u3VErlFLAbYR0KfxDa_6zeI2Hl-D00IzuKAoS9jgLWmR2q-YCN9DxyXyDbr9hLMXQOF4khYg2gzPJ6fwNESPG22oeb2ROrVz5hA-u-YIisoSwShHQttlyPkTefP375R0U80TmysM-oa9WTI5ftITQKm3I9MLkWQEmx9sdwmX1b3dRcoUT2KNnD64ip9vRL-VzI3sA7dj-SNkOcsx-gYl7Yih307Tx_mu5nxzFn4P2m0P"/> </div>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-primary">Spicy Wings</h3>
+<p class="text-gray-300 mt-1 flex-1">Crispy chicken wings tossed in our signature spicy sauce.</p>
+<div class="flex justify-between items-center mt-4"> <span class="text-xl font-bold">$8.99</span> <button class="border-2 border-primary text-primary font-bold py-2 px-4 rounded-full transition-all duration-300 hover:bg-primary hover:text-white active:scale-95 active:animate-add-to-cart">Order</button> </div>
+</div>
+</div>
+<div class="group relative bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSVIOPSTPqb6iLBa4rpu5XwYHQrjciTO9iObnPoXa2G-fecnPbhbk4GXCTFJvHtGUewOjT8KT1Q_5crUvTqQWT1RRRauxKwqMS9E-XMT4je5jLWrd38bEGB_Jwbj0aiyDowG6A_QTn6xhQQ2OlLozIGQrzNXAMG7RriEf32VOnlGO2ZVEB8qZOamHXQle8cgZcKkJjQsiHkfcYkvI0c8x_zTDoOqPo9DJoeth-hDIb5nDH1mBQx2uUKPF000GtnJumx8C9wVroCAr3')"></div>
+<div class="p-4">
+<h3 class="text-lg font-bold">Mozzarella Sticks</h3>
+<p class="text-sm text-gray-500 mt-1">Golden-fried and served with marinara sauce.</p>
+<div class="flex items-center justify-between mt-4"> <span class="text-xl font-bold text-gray-800">$6.99</span> <button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center transform transition-transform duration-300 group-hover:rotate-45 active:scale-90 active:animate-add-to-cart"> <span class="material-symbols-outlined"> add </span> </button> </div>
+</div>
+</div>
+<div class="group relative bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div> <img alt="French Fries" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvcnPC-yQMn0EGWVqynGU6LOggsF6R9rtnX4j07haQcD-5-1qEcWvMOVqfm8lGL925tPHwimi_EELBVvXhr8AILX5bmIA8NbGctzVLSWtLVWHM7zhiVOrbM7Y-IgQGKimLfMDVrAJ-CwShhhVtU-_UYMcZYQh8P3SHEf5nnu_sqbwBHJW5F-80vaDw9FhxP9n5k-cvlvrFC0mXjdyTL3uBpObpwyfTrjR6DaUFrG-IbuYopeNrwDmb5Jlo2GeptWSf-D9LY-M3exSK"/>
+<div class="absolute bottom-0 left-0 p-4 text-white">
+<h3 class="text-xl font-bold">French Fries</h3>
+<p class="text-sm">Crispy, golden, and lightly salted.</p>
+<div class="flex justify-between items-end mt-2"> <span class="text-2xl font-black">$3.99</span> <button class="bg-white text-primary font-bold py-2 px-4 rounded-full transition-all duration-300 hover:bg-gray-200 active:scale-95 active:animate-add-to-cart">Add</button> </div>
+</div>
+</div>
+<div class="group relative bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-105"> <img alt="Caesar Salad" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZiufGG8C5fuXQn4vVsfXVmHmS89gwLknrgbMQ9dK7va5jCp3zayxqkz4MOn599z6vrJNIAMhBPNa8mgIb5umQKMdLaOy1NpYouPQrqTLuSLSONVTx3XyFP4XcjUXF7BtjEE6Rhz2l1SIiwA2wy-LRIdbe60fqKonpnDpXg3WzC8JU4vQcDDUU5I2xPPxcynHGVwO1NAMxayl7Vhgoj0JHXT35c50fRJHRlRRE74V-s25XkCp6zrOkf4egOGmBzPqBfwuw0w5K_t1m"/>
+<div class="p-4 bg-gray-800 text-white">
+<h3 class="text-xl font-bold">Caesar Salad</h3>
+<p class="text-gray-400 text-sm mt-1">Romaine, croutons, parmesan, Caesar dressing.</p>
+<div class="flex justify-between items-center mt-3">
+<p class="text-lg font-semibold text-primary">$7.99</p> <button class="bg-primary text-white font-bold py-2 px-3 rounded-md hover:bg-red-600 transition-colors flex items-center gap-1 active:scale-95 active:animate-add-to-cart"> <span class="material-symbols-outlined text-lg"> add </span> </button> </div>
+</div>
+</div>
+<div class="group relative flex flex-col bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"> <img alt="Onion Rings" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh474NomPtdSdJFkyKCgPUFB9w_MfZ197Rzey9EuqwLkiC3fybbcVlhV-naMA1_cDqtaXeM24gdfvsQ-kuJB73qRFk1RaBi9ChPXt-YgOc6GmVFjro4tVTveTOk7QQctq6pCBFeDui4XdiAuZEkKnjpXZK9yPogX8X8WUeiPRhukDNB6bC8i6xKhHCmY9rzqs0W5qGFOJNYn6rGIdAy4l_U_rrkplATsDRNaEKSlSQU8sHD-9HbAZFEUenLi-LEkuNaGd9ysKEX1Tq"/>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-gray-900">Onion Rings</h3>
+<p class="text-gray-600 text-sm mt-1 flex-1">Battered and fried to a golden crisp.</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-xl font-black text-gray-900">$5.99</p> <button class="bg-primary text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors flex items-center gap-2 group-hover:scale-105 active:scale-95 active:animate-add-to-cart"> <span class="material-symbols-outlined text-base"> add_shopping_cart </span> Add </button> </div>
+</div>
+</div>
+<div class="group relative flex flex-col bg-gray-900 text-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:shadow-primary/50 hover:shadow-2xl">
+<div class="relative h-48"> <img alt="Breadsticks" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOnoDLuKdhTYqoLiykLudEs-iQxevYpFU6RIvJubvKmc1q9rdV8mzAJNl1pDFsIUdfIPaAOutGsYKANA4uQYqMHQtSLLG1y-fDlKNYt6SjvQNBuwfkLRMRPfyC7iz4nPL7ZGkkY9dIhW6VxxwprNDGI8vCYboZOlWh4ZeeFDy-qjuiwqLSwg9o5Ed5x8NOrZCLIX1tleJXT6I0eoJgP8mSqrrpnH_JnwAtuPRQcYcdw58B-JAwBjRaXd4QAzxNvq7hjZDFwV0Lg5hJ"/> </div>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-primary">Breadsticks</h3>
+<p class="text-gray-300 mt-1 flex-1">Soft, warm, and served with marinara.</p>
+<div class="flex justify-between items-center mt-4"> <span class="text-xl font-bold">$4.99</span> <button class="border-2 border-primary text-primary font-bold py-2 px-4 rounded-full transition-all duration-300 hover:bg-primary hover:text-white active:scale-95 active:animate-add-to-cart">Order</button> </div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-6">Beverages</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<div class="group relative bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC64kOqlVsGV0VC4na3gX8btt0HPMQjF7_8hJIsloereY3H3H8DYp_i6DUcylpxmb9zLE_dL4wv-6-9tcdEirJ7oCrJY5tkWhG3b8x3o6G9YS-WYWiJjXp359Lz58I9xYUd6C9w6FYZnM_xhfNwQDs-O0L4j6cz18Q0ARKvffVa83FJerqecz-1L5v-NxQEMJ9PiiBH_Q93McdEiuR5fR2frHpc5xSIEfCHvB659zjE2gl4vO28GmxXzJVipV6K8M57eWYrSjfYZla6')"></div>
+<div class="p-4">
+<h3 class="text-lg font-bold">Cola</h3>
+<p class="text-sm text-gray-500 mt-1">A refreshing can of classic cola.</p>
+<div class="flex items-center justify-between mt-4"> <span class="text-xl font-bold text-gray-800">$1.99</span> <button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center transform transition-transform duration-300 group-hover:rotate-45 active:scale-90 active:animate-add-to-cart"> <span class="material-symbols-outlined"> add </span> </button> </div>
+</div>
+</div>
+<div class="group relative flex flex-col bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"> <img alt="Lemon-Lime Soda" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE96P1YinB8NN4x9dAgNMcJOdeqh5-VC19Jw7DGwz21ierLcWxDIfo_uzIwjPT0A9-Es1OkAYSA8Gk6wqA981YX3GVuMthb4cD09ggZJwq-dMhnpLKKqnwYSrLK96v465YjgbhYN417wCnaFLUOxPdKAgT72KubaJGzXEAb2Q2dJpv672aRDRQV7hhBJXRWGCr1UhSlTVNwyFnDAcsij9Sm18-0kLtJID80oYNVkKEwMzHNFMCL5lXNebbAmC4L9M401gvWKIVLDmn"/>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-gray-900">Lemon-Lime Soda</h3>
+<p class="text-gray-600 text-sm mt-1 flex-1">Crisp and zesty lemon-lime soda.</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-xl font-black text-gray-900">$1.99</p> <button class="bg-primary text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors flex items-center gap-2 group-hover:scale-105 active:scale-95 active:animate-add-to-cart"> <span class="material-symbols-outlined text-base"> add_shopping_cart </span> Add </button> </div>
+</div>
+</div>
+<div class="group relative bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div> <img alt="Water Bottle" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUvhg0waOnbZJodm0DbhwwPS5m42a8_0RDZvLs4wkfoYOV65O9X6aF7xnSf0IgTpcvh7ffw12wUrFPuhdST7KNbMPzjY2Fv6V-wZcnuauqRAuE2pK2Y5ShwQrvFx4KKp7XY6IHrYYU4HtyX6o5cy8ix2COB1yPqazITIKkcsLpqfJH-mryVc3f9b3EVAJq3zo4SQyhey8JDeotkSj5IwNOVGJ0Xxn28LSxx9ME-f6Bf30xrUkzdrktLABFS0dxa2CLxrmGgfRb2vKQ"/>
+<div class="absolute bottom-0 left-0 p-4 text-white">
+<h3 class="text-xl font-bold">Bottled Water</h3>
+<p class="text-sm">Pure, refreshing bottled water.</p>
+<div class="flex justify-between items-end mt-2"> <span class="text-2xl font-black">$1.49</span> <button class="bg-white text-primary font-bold py-2 px-4 rounded-full transition-all duration-300 hover:bg-gray-200 active:scale-95 active:animate-add-to-cart">Add</button> </div>
+</div>
+</div>
+<div class="group relative bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-105"> <img alt="Iced Tea" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw7ik9fyyWt5MX78HG8vw9avhKVXq8bGoytPv4zqSfCRBYoTIgyJRbRyGOvxxzxTAhduYwZrQH7bzXDT8X5NuwRj0JCPxLFphD5PYNCQOL-_TZ0TutuKJRXYGmWHdEzGDARhgA0eE2OY2OMDRvX0AzyihWH48MiGxAyH2fSv1uuZ9VXowABi5QCLG9KJn88dF7_2kkpZ68SF-Opf_qavHqTpDyTv17KFOa7Hb6KbcYrh965u3HAryDxm6XV4wX6-XR1j51MxJGkKLP"/>
+<div class="p-4 bg-gray-800 text-white">
+<h3 class="text-xl font-bold">Iced Tea</h3>
+<p class="text-gray-400 text-sm mt-1">Freshly brewed and chilled unsweetened iced tea.</p>
+<div class="flex justify-between items-center mt-3">
+<p class="text-lg font-semibold text-primary">$2.49</p> <button class="bg-primary text-white font-bold py-2 px-3 rounded-md hover:bg-red-600 transition-colors flex items-center gap-1 active:scale-95 active:animate-add-to-cart"> <span class="material-symbols-outlined text-lg"> add </span> </button> </div>
+</div>
+</div>
+<div class="group relative flex flex-col bg-gray-900 text-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:shadow-primary/50 hover:shadow-2xl">
+<div class="relative h-48"> <img alt="Orange Soda" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLXvLggXLbV1StZM3PBzx-5Hxzrfn4gLm88As1_clg3C2YtV8Is02b1zS_GEbqZIB85douUmhuRpFZXf9ksZDy6gLjwZm6GjZzgby1oi_HSPuQHQcArOfos3lpH2JqI6a6tDTJOv15xGhC7eAmi041hqFTppfYV4ajt8SxuZgsPF07zHG8FkwLTFWsCbBlaU0DrEjBOsy2J-WyVQAyY9lSxgSPkbG0DYbCWn2SE-jMvncvz3Y_mUec9PvG64edaWvpCedDSRTvdCf-"/> </div>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-primary">Orange Soda</h3>
+<p class="text-gray-300 mt-1 flex-1">A burst of citrus flavor.</p>
+<div class="flex justify-between items-center mt-4"> <span class="text-xl font-bold">$1.99</span> <button class="border-2 border-primary text-primary font-bold py-2 px-4 rounded-full transition-all duration-300 hover:bg-primary hover:text-white active:scale-95 active:animate-add-to-cart">Order</button> </div>
+</div>
+</div>
+<div class="group relative bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqeTOYBggmh-EHoFPvcsqepLsGJ5eF5TFXwOkjdLXeeIDs2zOQ3F0zOx6wz5w2ICqXTcUtdNhGMWbKLlpOH7ki_2jR-i-ITKK6Hl3UladJIQedN4eCh91H7zSO1xFZinhW92_2qMIdn_eeg_hqK6g_ZwsY6u11y9joqwBIXTL0oFKNo_sy2NhrKVc9Wu-z79p3JYiorh_h35IYj8MFQ6v9TkI8x0DRYTtedxKN8uqX2AgCywvhOZG3GRpuHLCXWLKBlW0XQ9yRpCqR')"></div>
+<div class="p-4">
+<h3 class="text-lg font-bold">Root Beer</h3>
+<p class="text-sm text-gray-500 mt-1">Classic, creamy root beer.</p>
+<div class="flex items-center justify-between mt-4"> <span class="text-xl font-bold text-gray-800">$1.99</span> <button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center transform transition-transform duration-300 group-hover:rotate-45 active:scale-90 active:animate-add-to-cart"> <span class="material-symbols-outlined"> add </span> </button> </div>
+</div>
+</div>
+<div class="group relative flex flex-col bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"> <img alt="Lemonade" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmsIkD31DGb1SYd5hIUC2kk72B8DotaVON0YYl7zPNh9LtzUqEMOSacchfUc-6f957QcWYGqxjXuwIk48w56hJOmqnyWshtUq9GqA98bZIwCTwTmrcwzSRTSJCUiQWhgkjTTV4wNW08jc8h694TPdL7mtHSskQ8OJrZPJAPqGn7F5LRpQkmbyz20N2tIWlz9CQ2jvZH9Tn8Nco9Qv-pV-F5NQVgHLYD5FD5J60BG3xj0anhQYvqlcZH80OfAdDfVuJSnPxOKB8_9NA"/>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-gray-900">Lemonade</h3>
+<p class="text-gray-600 text-sm mt-1 flex-1">Sweet and tangy, freshly squeezed.</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-xl font-black text-gray-900">$2.49</p> <button class="bg-primary text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors flex items-center gap-2 group-hover:scale-105 active:scale-95 active:animate-add-to-cart"> <span class="material-symbols-outlined text-base"> add_shopping_cart </span> Add </button> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
